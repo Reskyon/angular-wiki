@@ -18,4 +18,5 @@ La aplicación de ejemplo está publicada en
 Esta wiki es una **copia de sólo lectura**. Se escribe en un repositorio
 privado de estudio y una GitHub Action la copia aquí cada vez que cambia, así
 que cualquier edición hecha directamente en esta wiki se pierde en la
-siguiente copia. Para correcciones o sugerencias, abre un *issue*.
+siguiente copia. Sólo los colaboradores de Reskyon pueden escribir en este
+repositorio y en su wiki.
