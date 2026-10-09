@@ -1,4 +1,4 @@
-# Static site for the wiki, served at https://angular-basics.reskyon.com/wiki/
+# Static site for the wiki, served at https://angular-wiki.reskyon.com/
 # The wiki version to publish is in wiki-ref (written by the Reskyon/angular-ufh
 # Action every time it copies the wiki).
 
@@ -18,5 +18,7 @@ RUN git clone --quiet https://github.com/Reskyon/angular-wiki.wiki.git /wiki \
 
 FROM nginx:alpine
 COPY site/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /out /usr/share/nginx/html/wiki
+# Replaces the default Nginx welcome page.
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build /out /usr/share/nginx/html
 EXPOSE 80

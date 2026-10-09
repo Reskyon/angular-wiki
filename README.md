@@ -10,7 +10,7 @@ y preguntas de entrevista de nivel senior con su respuesta.
 - [Parte 2: Angular](https://github.com/Reskyon/angular-wiki/wiki/02-bases)
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 
-Versión web: [angular-basics.reskyon.com/wiki](https://angular-basics.reskyon.com/wiki/).
+Versión web: [angular-wiki.reskyon.com](https://angular-wiki.reskyon.com/).
 La aplicación de ejemplo está publicada en
 [angular-basics.reskyon.com](https://angular-basics.reskyon.com).
 
@@ -38,7 +38,7 @@ Reskyon/angular-wiki
 ├── README.md
 └── site/
     ├── mkdocs.yml        ← configuración del sitio y del tema
-    ├── nginx.conf        ← cómo se sirve /wiki/
+    ├── nginx.conf        ← cómo se sirve el sitio
     └── scripts/
         └── prepare.py    ← convierte los .md de la wiki al formato de MkDocs
 ```
@@ -64,7 +64,7 @@ mkdocs build --strict ──► HTML estático
    │   genera el índice del buscador (JSON)
    │   falla si un enlace o ancla no existe
    ▼
-nginx:alpine sirve /wiki/
+nginx:alpine sirve el sitio en angular-wiki.reskyon.com
 ```
 
 - **`prepare.py` es el puente entre los dos formatos.** La wiki de GitHub
@@ -100,5 +100,5 @@ versión hay que revisar en qué quedó esa transición.
 ```bash
 docker build -t angular-wiki .
 docker run --rm -p 8080:80 angular-wiki
-# abrir http://localhost:8080/wiki/
+# abrir http://localhost:8080/
 ```
