@@ -72,6 +72,11 @@ nginx:alpine sirve el sitio en angular-wiki.reskyon.com
   `.md` para resolver el enlace. El script sólo reescribe esos enlaces y
   renombra la portada: el contenido no cambia. Corre únicamente en la etapa
   de build; la imagen final de Nginx sólo lleva el HTML generado.
+- **El menú se genera solo.** `prepare.py` reescribe el bloque `nav:` de
+  `mkdocs.yml`: Inicio y Guía de estudio primero, después cada página
+  `NN-nombre.md` ordenada por número (con su primer `# ` como título) y la
+  Hoja de atajos al final. Una página nueva `NN-nombre.md` aparece sin tocar
+  nada; una página con otro nombre hace fallar el build.
 - **Las anclas son las mismas que en GitHub** (`#módulo-8-…`, en minúsculas y
   con acentos), así que los enlaces a secciones funcionan igual en la wiki y
   en el sitio.

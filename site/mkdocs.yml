@@ -6,6 +6,7 @@ repo_name: Reskyon/angular-wiki
 edit_uri: ''
 docs_dir: docs
 
+# The menu is rewritten by scripts/prepare.py at build time from the wiki pages.
 nav:
   - Inicio: index.md
   - Guía de estudio: study-guide.md
