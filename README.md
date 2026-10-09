@@ -10,6 +10,7 @@ y preguntas de entrevista de nivel senior con su respuesta.
 - [Parte 2: Angular](https://github.com/Reskyon/angular-wiki/wiki/02-bases)
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 
+Versión web: [angular-basics.reskyon.com/wiki](https://angular-basics.reskyon.com/wiki/).
 La aplicación de ejemplo está publicada en
 [angular-basics.reskyon.com](https://angular-basics.reskyon.com).
 

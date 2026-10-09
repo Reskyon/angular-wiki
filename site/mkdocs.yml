@@ -1,0 +1,61 @@
+site_name: Angular UFH
+site_description: Guía de estudio de Angular en español
+site_url: https://angular-basics.reskyon.com/wiki/
+repo_url: https://github.com/Reskyon/angular-wiki
+repo_name: Reskyon/angular-wiki
+edit_uri: ''
+docs_dir: docs
+
+nav:
+  - Inicio: index.md
+  - Guía de estudio: study-guide.md
+  - 'Parte 1: TypeScript': 01-typescript-intro.md
+  - 'Parte 2: Angular': 02-bases.md
+  - Hoja de atajos: cheatsheet.md
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: red
+      toggle:
+        icon: material/brightness-7
+        name: Modo oscuro
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: red
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      # Mismos anclas que GitHub: minúsculas y conservando acentos (#módulo-8-...).
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+validation:
+  links:
+    anchors: warn
