@@ -5,8 +5,9 @@
   MkDocs needs the file name (02-bases.md#anchor).
 - Special wiki pages (_Sidebar, _Footer) are not published.
 - The nav: block of mkdocs.yml is rewritten from the wiki pages: fixed pages
-  first and last, and every NN-name.md in between, ordered by number and titled
-  with its first "# " heading.
+  first and last, the extra pages listed in EXTRA right after the study guide,
+  and every NN-name.md in between, ordered by number and titled with its first
+  "# " heading.
 """
 
 import re
@@ -45,9 +46,12 @@ for name, path in pages.items():
 # Fixed pages that open and close the menu.
 FIRST = [('Inicio', 'index.md'), ('Guía de estudio', 'study-guide.md')]
 LAST = [('Hoja de atajos', 'cheatsheet.md')]
+# Pages that are not a part of the course but belong in the menu, right after the
+# study guide. They are optional: a page only enters the menu if it exists in the wiki.
+EXTRA = ['ci-cd-y-despliegue']
 numbered = re.compile(r'\d\d-[a-z0-9-]+')
 
-known = {'Home', 'study-guide', 'cheatsheet'}
+known = {'Home', 'study-guide', 'cheatsheet', *EXTRA}
 unknown = sorted(n for n in pages if n not in known and not numbered.fullmatch(n))
 if unknown:
     sys.exit(f'Pages not in the menu (rename to NN-name or add to prepare.py): {unknown}')
@@ -66,12 +70,13 @@ def entry(label: str, file: str) -> str:
     return f"  - '{quoted}': {file}\n"
 
 
+extra = [(title(n), f'{n}.md') for n in EXTRA if n in pages]
 parts = [(title(n), f'{n}.md') for n in sorted(pages) if numbered.fullmatch(n)]
-nav = 'nav:\n' + ''.join(entry(*e) for e in FIRST + parts + LAST)
+nav = 'nav:\n' + ''.join(entry(*e) for e in FIRST + extra + parts + LAST)
 
 config = mkdocs_yml.read_text(encoding='utf-8')
 config, count = re.subn(r'^nav:\n(?:[ \t]+.*\n)+', nav, config, count=1, flags=re.M)
 if count != 1:
     sys.exit('mkdocs.yml has no nav: block to rewrite')
 mkdocs_yml.write_text(config, encoding='utf-8')
-print('nav rewritten with', len(parts), 'numbered pages')
+print('nav rewritten with', len(parts), 'numbered pages and', len(extra), 'extra pages')

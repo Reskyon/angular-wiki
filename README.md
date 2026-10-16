@@ -6,12 +6,12 @@ y preguntas de entrevista de nivel senior con su respuesta.
 **El contenido está en la [wiki de este repositorio](https://github.com/Reskyon/angular-wiki/wiki).**
 
 - [Guía de estudio](https://github.com/Reskyon/angular-wiki/wiki/study-guide): índice y ruta recomendada.
+- [CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/ci-cd-y-despliegue): cómo se publican las
+  aplicaciones y esta wiki.
 - [Parte 1: TypeScript sin framework](https://github.com/Reskyon/angular-wiki/wiki/01-typescript-intro)
 - [Parte 2: Angular](https://github.com/Reskyon/angular-wiki/wiki/02-bases)
 - [Parte 3: GIFs App](https://github.com/Reskyon/angular-wiki/wiki/03-gifs-app)
 - [Parte 4: Country App](https://github.com/Reskyon/angular-wiki/wiki/04-country-app)
-- [Parte 5: CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/05-ci-cd-y-despliegue): cómo se publican
-  las aplicaciones y esta wiki.
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 
 Versión web: [angular-wiki.reskyon.com](https://angular-wiki.reskyon.com/).
@@ -30,7 +30,7 @@ Esta wiki es una **copia de sólo lectura**. Se escribe en un repositorio
 privado de estudio y una GitHub Action la copia aquí cada vez que cambia, así
 que cualquier edición hecha directamente en esta wiki se pierde en la
 siguiente copia. El recorrido completo (de la edición a la web, con diagramas) está en
-[Parte 5: CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/05-ci-cd-y-despliegue). Sólo los
+[CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/ci-cd-y-despliegue). Sólo los
 colaboradores de Reskyon pueden escribir en este
 repositorio y en su wiki.
 
@@ -88,7 +88,9 @@ nginx:alpine sirve el sitio en angular-wiki.reskyon.com
   `mkdocs.yml`: Inicio y Guía de estudio primero, después cada página
   `NN-nombre.md` ordenada por número (con su primer `# ` como título) y la
   Hoja de atajos al final. Una página nueva `NN-nombre.md` aparece sin tocar
-  nada; una página con otro nombre hace fallar el build.
+  nada. Las páginas que no son una parte del curso (`ci-cd-y-despliegue`) se
+  declaran en la lista `EXTRA` del script y salen justo después de la Guía de
+  estudio. Una página con otro nombre hace fallar el build.
 - **Las anclas son las mismas que en GitHub** (`#módulo-8-…`, en minúsculas y
   con acentos), así que los enlaces a secciones funcionan igual en la wiki y
   en el sitio.
