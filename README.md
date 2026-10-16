@@ -8,18 +8,30 @@ y preguntas de entrevista de nivel senior con su respuesta.
 - [Guía de estudio](https://github.com/Reskyon/angular-wiki/wiki/study-guide): índice y ruta recomendada.
 - [Parte 1: TypeScript sin framework](https://github.com/Reskyon/angular-wiki/wiki/01-typescript-intro)
 - [Parte 2: Angular](https://github.com/Reskyon/angular-wiki/wiki/02-bases)
+- [Parte 3: GIFs App](https://github.com/Reskyon/angular-wiki/wiki/03-gifs-app)
+- [Parte 4: Country App](https://github.com/Reskyon/angular-wiki/wiki/04-country-app)
+- [Parte 5: CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/05-ci-cd-y-despliegue): cómo se publican
+  las aplicaciones y esta wiki.
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 
 Versión web: [angular-wiki.reskyon.com](https://angular-wiki.reskyon.com/).
-La aplicación de ejemplo está publicada en
-[angular-basics.reskyon.com](https://angular-basics.reskyon.com).
+
+Las aplicaciones de ejemplo están publicadas en:
+
+| Parte                | Aplicación                                                          |
+| -------------------- | ------------------------------------------------------------------- |
+| Parte 2: Angular     | [angular-basics.reskyon.com](https://angular-basics.reskyon.com)    |
+| Parte 3: GIFs App    | [angular-gifs.reskyon.com](https://angular-gifs.reskyon.com)        |
+| Parte 4: Country App | [angular-country.reskyon.com](https://angular-country.reskyon.com)  |
 
 ## Cómo se actualiza
 
 Esta wiki es una **copia de sólo lectura**. Se escribe en un repositorio
 privado de estudio y una GitHub Action la copia aquí cada vez que cambia, así
 que cualquier edición hecha directamente en esta wiki se pierde en la
-siguiente copia. Sólo los colaboradores de Reskyon pueden escribir en este
+siguiente copia. El recorrido completo (de la edición a la web, con diagramas) está en
+[Parte 5: CI/CD y despliegue](https://github.com/Reskyon/angular-wiki/wiki/05-ci-cd-y-despliegue). Sólo los
+colaboradores de Reskyon pueden escribir en este
 repositorio y en su wiki.
 
 ## Cómo se construye el sitio web
