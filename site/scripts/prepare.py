@@ -48,7 +48,7 @@ FIRST = [('Inicio', 'index.md'), ('Guía de estudio', 'study-guide.md')]
 LAST = [('Hoja de atajos', 'cheatsheet.md')]
 # Pages that are not a part of the course but belong in the menu, right after the
 # study guide. They are optional: a page only enters the menu if it exists in the wiki.
-EXTRA = ['ci-cd-y-despliegue']
+EXTRA = ['ci-cd-y-despliegue', 'formato-del-codigo']
 numbered = re.compile(r'\d\d-[a-z0-9-]+')
 
 known = {'Home', 'study-guide', 'cheatsheet', *EXTRA}
