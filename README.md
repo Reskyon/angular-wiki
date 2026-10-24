@@ -12,7 +12,12 @@ y preguntas de entrevista de nivel senior con su respuesta.
 - [Parte 2: Angular](https://github.com/Reskyon/angular-wiki/wiki/02-bases)
 - [Parte 3: GIFs App](https://github.com/Reskyon/angular-wiki/wiki/03-gifs-app)
 - [Parte 4: Country App](https://github.com/Reskyon/angular-wiki/wiki/04-country-app)
+- [Parte 5: Pipes App](https://github.com/Reskyon/angular-wiki/wiki/05-pipes-app)
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
+- [Formato del código](https://github.com/Reskyon/angular-wiki/wiki/formato-del-codigo): Prettier, ESLint y
+  formateo al guardar.
+- [Plantilla de un proyecto nuevo](https://github.com/Reskyon/angular-wiki/wiki/nuevo-proyecto): los pasos
+  para dejar un proyecto recién creado igual que los demás.
 
 Versión web: [angular-wiki.reskyon.com](https://angular-wiki.reskyon.com/).
 
@@ -23,6 +28,7 @@ Las aplicaciones de ejemplo están publicadas en:
 | Parte 2: Angular     | [angular-basics.reskyon.com](https://angular-basics.reskyon.com)    |
 | Parte 3: GIFs App    | [angular-gifs.reskyon.com](https://angular-gifs.reskyon.com)        |
 | Parte 4: Country App | [angular-country.reskyon.com](https://angular-country.reskyon.com)  |
+| Parte 5: Pipes App   | [angular-pipes.reskyon.com](https://angular-pipes.reskyon.com)      |
 
 ## Cómo se actualiza
 
@@ -88,9 +94,9 @@ nginx:alpine sirve el sitio en angular-wiki.reskyon.com
   `mkdocs.yml`: Inicio y Guía de estudio primero, después cada página
   `NN-nombre.md` ordenada por número (con su primer `# ` como título) y la
   Hoja de atajos al final. Una página nueva `NN-nombre.md` aparece sin tocar
-  nada. Las páginas que no son una parte del curso (`ci-cd-y-despliegue`) se
-  declaran en la lista `EXTRA` del script y salen justo después de la Guía de
-  estudio. Una página con otro nombre hace fallar el build.
+  nada. Las páginas que no son una parte del curso (`ci-cd-y-despliegue`,
+  `formato-del-codigo`, `nuevo-proyecto`) se declaran en la lista `EXTRA` del
+  script y salen justo después de la Guía de estudio. Una página con otro nombre hace fallar el build.
 - **Las anclas son las mismas que en GitHub** (`#módulo-8-…`, en minúsculas y
   con acentos), así que los enlaces a secciones funcionan igual en la wiki y
   en el sitio.
