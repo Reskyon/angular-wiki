@@ -1,7 +1,9 @@
-# Angular Wiki
+# Guía de Angular: de básico a intermedio
 
 Guía de estudio de Angular en español: teoría de cada tema, una hoja de atajos
-y preguntas de entrevista de nivel senior con su respuesta.
+y preguntas de entrevista de nivel senior con su respuesta. Se basa en los
+ejercicios del curso [Angular: De cero a experto](https://www.udemy.com/course/angular-fernando-herrera/)
+de Fernando Herrera en Udemy.
 
 **El contenido está en la [wiki de este repositorio](https://github.com/Reskyon/angular-wiki/wiki).**
 
@@ -13,6 +15,10 @@ y preguntas de entrevista de nivel senior con su respuesta.
 - [Parte 3: GIFs App](https://github.com/Reskyon/angular-wiki/wiki/03-gifs-app)
 - [Parte 4: Country App](https://github.com/Reskyon/angular-wiki/wiki/04-country-app)
 - [Parte 5: Pipes App](https://github.com/Reskyon/angular-wiki/wiki/05-pipes-app)
+- [Parte 6: Reactive Forms App](https://github.com/Reskyon/angular-wiki/wiki/06-reactive-forms-app)
+- [Parte 7: Lifecycle Hooks](https://github.com/Reskyon/angular-wiki/wiki/07-lifecycle-hooks)
+- [Parte 8: Maps App](https://github.com/Reskyon/angular-wiki/wiki/08-maps-app)
+- [Parte 9: Teslo Shop](https://github.com/Reskyon/angular-wiki/wiki/09-teslo-shop)
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 - [Formato del código](https://github.com/Reskyon/angular-wiki/wiki/formato-del-codigo): Prettier, ESLint y
   formateo al guardar.
@@ -23,12 +29,15 @@ Versión web: [angular-wiki.reskyon.com](https://angular-wiki.reskyon.com/).
 
 Las aplicaciones de ejemplo están publicadas en:
 
-| Parte                | Aplicación                                                          |
-| -------------------- | ------------------------------------------------------------------- |
-| Parte 2: Angular     | [angular-basics.reskyon.com](https://angular-basics.reskyon.com)    |
-| Parte 3: GIFs App    | [angular-gifs.reskyon.com](https://angular-gifs.reskyon.com)        |
-| Parte 4: Country App | [angular-country.reskyon.com](https://angular-country.reskyon.com)  |
-| Parte 5: Pipes App   | [angular-pipes.reskyon.com](https://angular-pipes.reskyon.com)      |
+| Parte                       | Aplicación                                                             |
+| --------------------------- | ---------------------------------------------------------------------- |
+| Parte 2: Angular            | [angular-basics.reskyon.com](https://angular-basics.reskyon.com)       |
+| Parte 3: GIFs App           | [angular-gifs.reskyon.com](https://angular-gifs.reskyon.com)           |
+| Parte 4: Country App        | [angular-country.reskyon.com](https://angular-country.reskyon.com)     |
+| Parte 5: Pipes App          | [angular-pipes.reskyon.com](https://angular-pipes.reskyon.com)         |
+| Parte 6: Reactive Forms App | [angular-forms.reskyon.com](https://angular-forms.reskyon.com)         |
+| Parte 7: Lifecycle Hooks    | [angular-lifecycle.reskyon.com](https://angular-lifecycle.reskyon.com) |
+| Parte 8: Maps App           | [angular-maps.reskyon.com](https://angular-maps.reskyon.com)           |
 
 ## Cómo se actualiza
 
