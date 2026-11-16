@@ -40,6 +40,7 @@ letra, para poder citar un módulo desde cualquier página sin confundirlo:
 | A       | Parte 4: Animaciones y fondo (`04-animaciones`) | A2: por qué un `from()` con retraso dejaba un elemento invisible |
 | G       | Parte 5: La galería (`05-galeria`) | G2: por qué la imagen es visible sin JavaScript y el recuadro de carga queda detrás; G5: por qué la galería también es una sección de la portada |
 | V       | Parte 6: Metadatos para compartir y buscadores (`06-seo-y-vista-previa`) | V3: por qué las etiquetas se escriben en un `TitleStrategy` y no al terminar la navegación |
+| D       | Parte 7: La guía DIY (`07-guia-diy`) | D3: por qué en la guía el cambio de idioma lleva al mismo paso y no conserva el desplazamiento |
 
 Cuando una página dice «el Módulo M3 de la Parte 1», es eso: la página
 `01-marca-y-recursos`, sección «Módulo M3».
@@ -62,6 +63,7 @@ vectorial que exporte SVG.
 | 4 | [Animaciones y fondo](04-animaciones.md) | La coreografía de GSAP en un solo archivo con su inicializador, los reveals que no se quedan ocultos, el campo de puntos en un canvas y el interruptor que apaga JavaScript y CSS a la vez y que se aplica antes del primer pintado |
 | 5 | [La galería](05-galeria.md) | Los datos de la galería generados desde una carpeta de imágenes, la pantalla de carga con la forma de cada imagen, los filtros accesibles, el visor con el foco bien manejado y la entrada en la portada que la suma a la serie de secciones |
 | 6 | [Metadatos para compartir y buscadores](06-seo-y-vista-previa.md) | Las etiquetas Open Graph y la imagen para compartir, un `TitleStrategy` que las escribe con el título ya resuelto, direcciones canónicas y de idioma, las páginas fuera del índice, `robots.txt` y un `sitemap.xml` generado en el build |
+| 7 | [La guía DIY](07-guia-diy.md) | Una guía corta en dos idiomas desde un YAML validado en el build, su página y su entrada en la portada arriba de Contacto, la URL que sigue el paso que se lee, el cambio de idioma que lleva al mismo paso y el cierre hacia el Bonus |
 
 ## Ruta recomendada
 
@@ -84,4 +86,7 @@ vectorial que exporte SVG.
 7. Sigue con la [Parte 6: Metadatos para compartir y buscadores](06-seo-y-vista-previa.md):
    las etiquetas de vista previa, la imagen para compartir, las direcciones
    canónicas, `robots.txt`, el mapa del sitio y cómo comprobarlo todo.
-8. Para seguir el contenido desde su origen hasta producción, abre [Experiencia](learn-experience.md), [Proyectos](learn-projects.md) y [Compilación y publicación](learn-release.md).
+8. Termina con la [Parte 7: La guía DIY](07-guia-diy.md): la versión corta de esta
+   guía como una sección más del sitio, con su contenido validado, su página y un
+   cambio de idioma que conserva el paso.
+9. Para seguir el contenido desde su origen hasta producción, abre [Experiencia](learn-experience.md), [Proyectos](learn-projects.md) y [Compilación y publicación](learn-release.md).

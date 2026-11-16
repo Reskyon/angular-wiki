@@ -904,7 +904,8 @@ Fuente: `src/app/home/components/gallery-teaser/`,
 ### El problema que resuelve
 
 La portada se lee de arriba abajo, y al final de cada sección hay un enlace
-«Siguiente capítulo» con un contador (01/07, 02/07...). Una galería que solo
+«Siguiente capítulo» con un contador (01/07, 02/07... cuando se sumó la galería;
+hoy 01/08, con la guía DIY de la [Parte 7](07-guia-diy.md)). Una galería que solo
 existe en el menú rompe ese hilo: la serie salta de Proyectos a Contacto, la
 numeración queda alterada y quien llega leyendo nunca se entera de que hay una
 galería. Es una inconsistencia de experiencia, no de código.
@@ -956,6 +957,7 @@ export const SECTIONS: readonly Section[] = [
   { id: 'experience', label: { en: 'Experience', es: 'Experiencia' } },
   { id: 'projects', label: { en: 'Projects', es: 'Proyectos' } },
   { id: 'gallery', label: { en: 'Gallery', es: 'Galería' } },
+  { id: 'diy', label: { en: 'DIY guide', es: 'Guía DIY' } },
   { id: 'contact', label: { en: 'Contact', es: 'Contacto' } },
 ]
 ```
@@ -1012,7 +1014,10 @@ Y su entrada animada, junto a la de las tarjetas de proyecto:
 
 - **El contador sale de la posición en `SECTIONS`.** Con `gallery` en la sexta
   posición, el enlace de Proyectos apunta a ella y el de la galería, a Contacto.
-  El contador pasa de «x/06» a «x/07» sin tocar ninguno de los componentes.
+  El contador pasó de «x/06» a «x/07» sin tocar ninguno de los componentes. La
+  constante de arriba es la actual: con `diy` (la
+  [Parte 7: La guía DIY](07-guia-diy.md)), la galería apunta a la guía DIY y no a
+  Contacto, y el contador es «x/08».
 - **La imagen se recorta a la forma de la tarjeta.** La portada es una foto
   vertical; con `object-fit: cover` y `object-position: center 20%` se ve la
   parte alta de la columna, que es lo que importa.

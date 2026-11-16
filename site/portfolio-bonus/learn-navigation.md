@@ -14,6 +14,8 @@ Cuando un enlace lleva a una sección y su título desaparece debajo de la barra
 
 Cambiar de idioma es una comprobación distinta. `LanguageSwitcherComponent` cambia el primer segmento de la URL y conserva el resto, incluido `#experience`. En una portada ya desplazada, las etiquetas cambian y el lector se mantiene en el mismo lugar. Si en ese caso vuelve a saltar al título, reviso `KEEP_SCROLL` en el selector antes de tocar la altura del encabezado.
 
+La guía DIY (`/en/diy`) es la excepción a propósito. Mientras lees, la URL guarda el paso en el fragmento (`#styles`, por ejemplo) sin mover la página. Al cambiar de idioma, el selector conserva ese fragmento y la otra versión baja hasta el mismo paso, porque los dos idiomas no miden lo mismo. Si llegas arriba de la página en lugar de al paso, mira primero si la URL tenía el fragmento antes de cambiar de idioma; si lo tenía, revisa `scrollInfoFor` en el selector. [Cómo se construyó la guía](07-guia-diy.md#módulo-d3-la-url-que-sigue-el-paso-y-el-cambio-de-idioma).
+
 Encabezado · Desplazamiento por fragmento
 
 ## Caso resuelto: aparece movimiento al recargar con el interruptor apagado

@@ -4,7 +4,7 @@
 
 Esta página distingue las decisiones del sitio de Janio de la anatomía de la
 plantilla original. Portify incluye once secciones; el MVP se acordó con **seis**
-y el sitio publicado tiene hoy **siete** (se suma Galería, ver más abajo), en
+y el sitio publicado tiene hoy **ocho** (se suman Galería y la guía DIY, ver más abajo), en
 español e inglés. La [referencia de arquitectura](arquitectura.md) explica cómo
 se prepara y se publica ese contenido.
 
@@ -21,11 +21,25 @@ se prepara y se publica ese contenido.
 
 Servicios, cifras, proceso, blog y testimonios quedan fuera del MVP. Recursos no
 tiene sección propia: la guía de Angular se enlaza desde su proyecto y el pie.
-La tabla recoge las seis secciones acordadas para el MVP. La navegación las sigue (desde el 14 de noviembre de 2026 se
-suma Galería entre Proyectos y Contacto, ver
-[Parte 5](05-galeria.md#módulo-g5-la-entrada-en-la-portada)); si se conserva «Next Chapter», sus
-etiquetas y numeración deben corresponder al recorrido real, no a los once pasos
-originales.
+La tabla recoge las seis secciones acordadas para el MVP. Después se sumaron dos,
+siempre arriba de Contacto, que es la última. Este es el orden del sitio publicado,
+el mismo del menú:
+
+| Orden | Sección | Desde | Qué muestra en la portada |
+| --- | --- | --- | --- |
+| 1 | Inicio | MVP | El hero |
+| 2 | Sobre mí | MVP | El texto de presentación |
+| 3 | Habilidades | MVP | Grupos y etiquetas |
+| 4 | Experiencia | MVP | La cronología |
+| 5 | Proyectos | MVP | Tarjetas con su página de detalle |
+| 6 | Galería | 14 de noviembre de 2026 | Una tarjeta con portada que lleva a `/en/gallery` y `/es/gallery` ([Parte 5, Módulo G5](05-galeria.md#módulo-g5-la-entrada-en-la-portada)) |
+| 7 | Guía DIY | 16 de noviembre de 2026 | Título, descripción y un botón, sin imagen, que lleva a `/en/diy` y `/es/diy` ([Parte 7, Módulo D2](07-guia-diy.md#módulo-d2-la-página-y-la-entrada-en-la-portada)) |
+| 8 | Contacto | MVP | La invitación a escribir por LinkedIn |
+
+Dos reglas mantienen ese orden: toda sección nueva va arriba de Contacto, y todo lo
+que tiene página propia tiene también su entrada en la portada. «Next chapter» se
+conserva, con etiquetas y numeración del recorrido real (`01/08` a `07/08`), no de
+los once pasos originales.
 
 El selector ES / EN conecta las rutas `/es/` y `/en/`. Se traducen interfaz,
 contenido y metadatos. Los detalles de proyectos usan `/es/projects/:slug` y

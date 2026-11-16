@@ -6,8 +6,8 @@ Guía para adaptar Portify al sitio acordado: Angular con contenido Markdown/YAM
 prerenderizado estático y versiones en español e inglés. La plantilla se usa como
 referencia visual; no se publica directamente como producto final.
 
-Las seis secciones elegidas para el MVP (el sitio publicado suma una séptima,
-Galería) están en [Secciones y contenido](secciones-y-contenido.md#secciones-elegidas-para-el-mvp).
+Las seis secciones elegidas para el MVP (el sitio publicado suma dos más,
+Galería y la guía DIY, hasta llegar a ocho) están en [Secciones y contenido](secciones-y-contenido.md#secciones-elegidas-para-el-mvp).
 La [referencia de arquitectura](arquitectura.md) explica cómo se conectan las piezas del sitio.
 
 ## Puesta en marcha

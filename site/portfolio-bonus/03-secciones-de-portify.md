@@ -23,9 +23,11 @@ sitio Angular.
 `src/app/shared/utils/` y `src/app/app.config.ts`. **Sitio publicado:**
 [janioisacura.com](https://janioisacura.com/en/). Este capítulo recorre las seis
 secciones adaptadas de Portify. Las animaciones y el fondo se explican en la
-[Parte 4](04-animaciones.md). La galería, que desde el 14 de noviembre de 2026
-es una séptima sección entre Proyectos y Contacto, está en la
-[Parte 5](05-galeria.md#módulo-g5-la-entrada-en-la-portada).
+[Parte 4](04-animaciones.md). Las dos secciones que se sumaron después, arriba de
+Contacto, tienen su propia parte: la
+[galería](05-galeria.md#módulo-g5-la-entrada-en-la-portada) (desde el 14 de noviembre
+de 2026) en la Parte 5, y la [guía DIY](07-guia-diy.md) (desde el 16 de noviembre
+de 2026) en la Parte 7. Con ellas el sitio tiene ocho secciones.
 
 **Qué vas a aprender:**
 
@@ -34,7 +36,7 @@ es una séptima sección entre Proyectos y Contacto, está en la
   nombre pequeño, el retrato redondo con las ondas de Portify y cómo ponerlo
   primero en móvil sin cambiar el HTML.
 - [Módulo S2](#módulo-s2-el-enlace-next-chapter-como-componente-compartido):
-  **«Next chapter».** Un componente que calcula «01/07» y el destino desde
+  **«Next chapter».** Un componente que calcula «01/08» y el destino desde
   la lista de secciones, con la flecha de Phosphor como SVG en lugar de la
   fuente de iconos, y un contraste que cumple WCAG AA.
 - [Módulo S3](#módulo-s3-scroll-por-fragmento-sin-saltos): **Scroll por
@@ -111,9 +113,9 @@ al revés.
 - Retrato en `public/images/hero.jpg`, cuadrado de 416 × 416 como el de
   Portify, redondo con borde de 2 px y las ondas en CSS. Por debajo de `md`
   va primero y centrado; desde `md`, a la derecha del texto.
-- El enlace «01/07 Next chapter» es un componente compartido (Módulo S2). El
+- El enlace «01/08 Next chapter» es un componente compartido (Módulo S2). El
   total sale de `SECTIONS`: eran seis secciones cuando se escribió este módulo
-  («01/06») y son siete con la Galería de la Parte 5.
+  («01/06») y hoy son ocho con la Galería (Parte 5) y la guía DIY (Parte 7).
 
 ### El código
 
@@ -391,7 +393,7 @@ de la plantilla.
 - La flecha es el SVG de Phosphor `arrow-elbow-right-down`, pegado inline:
   Phosphor es MIT, el archivo pesa unos 300 bytes y toma el color del texto
   con `currentColor`.
-- El contador «01/07» va en negro al 60 %: al 50 %, como en Portify, el
+- El contador «01/08» va en negro al 60 %: al 50 %, como en Portify, el
   contraste sobre el amarillo es de 3,7:1, por debajo del 4,5:1 de WCAG AA.
 
 ### El código
@@ -442,7 +444,7 @@ Uso en una sección: `<shared-next-chapter [locale]="locale()" current="home" />
 - **`input.required`** declara entradas obligatorias como señales: si una
   sección olvida pasar `current`, el compilador de plantillas avisa.
 - **`computed`** deriva la posición y el destino de `SECTIONS` y de las
-  entradas; se recalcula solo si cambia la sección. El «01/07» lo escribe el
+  entradas; se recalcula solo si cambia la sección. El «01/08» lo escribe el
   `SerialPipe` en la plantilla, desde esa posición y desde `lastIndex`
   (Módulo S6; al principio era un `padStart(2, '0')` dentro del `computed`).
   `SECTIONS[index + 1]?.id ?? null` devuelve `null` en la última sección, y
@@ -771,6 +773,17 @@ de la barra), vale cero donde el encabezado no es fijo (`auto` se convierte en
 0) y se actualiza sola si la barra cambia de altura. En el servidor no se
 llama nunca: el `ViewportScroller` del servidor no hace nada.
 
+### Después: en la guía DIY el cambio de idioma va al paso
+
+Otra etapa posterior (16 de noviembre de 2026). El selector ya no envía siempre
+`KEEP_SCROLL`: cada opción lleva su propio `info`. En la guía DIY con un paso en
+la URL (`/en/diy#styles`) va sin `KEEP_SCROLL`, y el inicializador de arriba baja
+hasta ese paso en el otro idioma, porque los dos idiomas no miden lo mismo. En el
+resto del sitio, cambiar de idioma sigue sin mover la página. El porqué y el
+código están en el
+[Módulo D3 de la Parte 7](07-guia-diy.md#módulo-d3-la-url-que-sigue-el-paso-y-el-cambio-de-idioma),
+que construye ese comportamiento de la guía.
+
 ### Errores comunes
 
 - **Poner `overflow-x: clip` en el `body`** esperando bloquear el scroll
@@ -951,7 +964,7 @@ export class AboutComponent {
   repite el título salvo que la sección pida otro.
 - **Un solo `<h2>` por sección.** El subtítulo es un párrafo; así la
   jerarquía del documento es `<h1>` (nombre) y un `<h2>` por sección (seis
-  aquí, siete con la Galería), y
+  aquí; hoy ocho, con la Galería y la guía DIY), y
   dentro de cada una los `<h3>` que hagan falta.
 - **Los párrafos salen del Markdown.** El script de contenido deja el cuerpo
   de `about.md` como texto y el componente lo parte por líneas en blanco
@@ -2226,9 +2239,9 @@ señal derivada de la URL no tiene estado que pueda quedar viejo.
 
 ## Qué sigue en esta parte
 
-Las seis secciones de Portify y el pie están construidos; la Galería, que
-llega en la [Parte 5](05-galeria.md), se suma entre Proyectos y Contacto: siete
-secciones en total. Las animaciones de GSAP,
+Las seis secciones de Portify y el pie están construidos; la Galería
+([Parte 5](05-galeria.md)) y la guía DIY ([Parte 7](07-guia-diy.md)) se suman entre
+Proyectos y Contacto: ocho secciones en total. Las animaciones de GSAP,
 el lienzo de puntos del fondo y el interruptor de animaciones están en la
 [Parte 4](04-animaciones.md). Para seguir el comportamiento del menú, consulta
 [Navegación y movimiento](learn-navigation.md).

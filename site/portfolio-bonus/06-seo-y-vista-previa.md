@@ -61,7 +61,8 @@ dentro, errores comunes y preguntas de entrevista con su respuesta.
 
 Esta página es una parte de la guía [Cómo se construye este sitio](como-se-construye.md).
 La anterior es la [Parte 5: La galería](05-galeria.md), cuya página aparece en el
-mapa del sitio de esta parte. Esta es, por ahora, la última parte.
+mapa del sitio de esta parte. La siguiente es la
+[Parte 7: La guía DIY](07-guia-diy.md).
 
 ---
 

@@ -6,7 +6,8 @@
 > sitio. Consultar las [seis secciones elegidas](secciones-y-contenido.md#secciones-elegidas-para-el-mvp)
 > y la [adaptación para el MVP](personalizacion.md): sin porcentajes de habilidades,
 > formulario ni mapa. Sólo se trasladan los estilos y dependencias necesarios.
-> El sitio publicado tiene hoy siete secciones: las seis del MVP más Galería.
+> El sitio publicado tiene hoy ocho secciones: las seis del MVP más Galería y la
+> guía DIY, las dos arriba de Contacto.
 
 **Portify** es una plantilla HTML de portfolio personal de una sola página,
 vendida en ThemeForest por Pixelaxis (el encabezado de `styles.scss` dice
