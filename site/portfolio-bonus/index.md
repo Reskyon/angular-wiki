@@ -1,4 +1,4 @@
-# Wiki de janioisacura
+# Bonus: CV/Portfolio Angular
 
 Esta wiki te ayuda a entender y mantener el portfolio y CV de Janio Isacura. También puedes usarlo como ejemplo para [construir tu propio portfolio con Angular y una plantilla](como-se-construye.md). El sitio tiene siete secciones y se publica en inglés y español.
 
@@ -29,4 +29,4 @@ Tienes una plantilla que te gusta y quieres convertirla en un sitio que muestre 
 
 ## Licencia
 
-Portify se compró en ThemeForest con licencia *Regular*: vale para un solo sitio final y no permite redistribuir el código fuente. El repositorio y esta wiki son privados por eso; el código de la plantilla no se publica en repos públicos.
+Portify se compró en ThemeForest con licencia *Regular*: vale para un solo sitio final y no permite redistribuir el código fuente. La guía pública explica la adaptación de la plantilla al portfolio.
