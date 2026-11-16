@@ -802,9 +802,9 @@ de un proyecto, no sólo desde la portada.
 - Un solo componente, `shared-header`, renderiza la barra, el `<nav>` y el
   overlay, porque los tres comparten un estado: `menuOpen`, una señal.
 - Las secciones de la portada viven en una constante `SECTIONS` con `id` y
-  etiqueta por idioma. Hoy son siete: las seis de Portify más la Galería, que
-  llega en la Parte 5 (el snippet de abajo ya la incluye). El `id` es a la vez el atributo del `<section>` y el fragmento
-  del enlace. El número (`01` a `07`) lo escribe el `SerialPipe` en la
+  etiqueta por idioma. Hoy son ocho: las seis de Portify más la Galería y la
+  guía DIY, que llegan en las Partes 5 y 7, arriba de Contacto (el snippet de abajo ya las incluye). El `id` es a la vez el atributo del `<section>` y el fragmento
+  del enlace. El número (`01` a `08`) lo escribe el `SerialPipe` en la
   plantilla desde la posición en el `@for` (Parte 3, Módulo S6).
 - Cada enlace es un `routerLink` a `/${locale}` con `fragment`, no un
   `href="#about"`: así funciona desde `/en/projects/angular-guide`, que
@@ -863,6 +863,7 @@ export const SECTIONS: readonly Section[] = [
   { id: 'experience', label: { en: 'Experience', es: 'Experiencia' } },
   { id: 'projects', label: { en: 'Projects', es: 'Proyectos' } },
   { id: 'gallery', label: { en: 'Gallery', es: 'Galería' } },
+  { id: 'diy', label: { en: 'DIY guide', es: 'Guía DIY' } },
   { id: 'contact', label: { en: 'Contact', es: 'Contacto' } },
 ]
 ```

@@ -1,6 +1,6 @@
 # Bonus: CV/Portfolio Angular
 
-Esta wiki te ayuda a entender y mantener el portfolio y CV de Janio Isacura. También puedes usarlo como ejemplo para [construir tu propio portfolio con Angular y una plantilla](como-se-construye.md). El sitio tiene siete secciones y se publica en inglés y español.
+Esta wiki te ayuda a entender y mantener el portfolio y CV de Janio Isacura. También puedes usarlo como ejemplo para [construir tu propio portfolio con Angular y una plantilla](como-se-construye.md). El sitio tiene ocho secciones, con Contacto al final, y se publica en inglés y español.
 
 ## Es mi primera vez en el proyecto
 
@@ -20,7 +20,7 @@ Abre el [Guion para presentar el sitio](showcase.md). Cada parada indica qué en
 
 ### Cómo construir tu portfolio y CV con Angular usando una plantilla
 
-Tienes una plantilla que te gusta y quieres convertirla en un sitio que muestre tu experiencia, tus proyectos y tu CV. ¿Por dónde empiezas? [Cómo se construye este sitio](como-se-construye.md) recorre un caso real en seis partes. Verás cómo preparar la marca y las imágenes, adaptar los estilos, convertir las secciones en componentes de Angular y añadir animaciones, una galería y metadatos para compartir el sitio. Puedes seguir el recorrido con otra plantilla y aprovechar las decisiones que encajen con tu proyecto.
+Tienes una plantilla que te gusta y quieres convertirla en un sitio que muestre tu experiencia, tus proyectos y tu CV. ¿Por dónde empiezas? [Cómo se construye este sitio](como-se-construye.md) recorre un caso real en siete partes. Verás cómo preparar la marca y las imágenes, adaptar los estilos, convertir las secciones en componentes de Angular y añadir animaciones, una galería, metadatos para compartir el sitio y una guía corta en dos idiomas. Puedes seguir el recorrido con otra plantilla y aprovechar las decisiones que encajen con tu proyecto. Si prefieres empezar por una versión corta, el sitio tiene su propia [guía DIY](https://janioisacura.com/es/diy): seis pasos, en inglés y en español, que terminan enlazando a esta guía completa.
 
 ### Referencias de este sitio
 
