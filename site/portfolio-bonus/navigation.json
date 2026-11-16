@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Aprende el sitio",
+    "pages": [
+      "learn-the-site",
+      "learn-experience",
+      "learn-projects",
+      "learn-gallery",
+      "learn-navigation",
+      "learn-release",
+      "maintenance",
+      "agregar-un-proyecto",
+      "agregar-imagenes-al-portfolio",
+      "showcase"
+    ]
+  },
+  {
+    "title": "Referencia técnica",
+    "pages": [
+      "arquitectura",
+      "plantilla-portify",
+      "secciones-y-contenido",
+      "estilos-y-animaciones",
+      "personalizacion",
+      "como-se-construye",
+      "01-marca-y-recursos",
+      "02-cimientos-de-estilo",
+      "03-secciones-de-portify",
+      "04-animaciones",
+      "05-galeria",
+      "06-seo-y-vista-previa",
+      "exportar-svg"
+    ]
+  }
+]

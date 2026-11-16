@@ -123,6 +123,19 @@ edición en la wiki privada
    └──► actualiza wiki-ref en main ──► Coolify redespliega el sitio
 ```
 
+
+### Bonus de CV/Portfolio Angular
+
+El sitio admite una segunda fuente opcional en `site/portfolio-bonus/`. Esa
+carpeta recibe el Markdown revisado y su manifiesto de navegación en un PR.
+`prepare_portfolio_bonus()` incorpora las páginas bajo `/portfolio-bonus/`
+y coloca el Bonus después del último capítulo numerado, antes de la Hoja de
+atajos. Un capítulo nuevo queda antes del Bonus sin editar el menú a mano.
+
+El Bonus se genera en la compilación del sitio. La compilación usa el contenido
+revisado incluido en el repositorio y el `wiki-ref` del curso. Si la carpeta
+opcional no está presente, se construye el curso con su navegación habitual.
+
 ### Versiones fijadas
 
 El `Dockerfile` fija `mkdocs==1.6.1` y `mkdocs-material==9.7.7`. MkDocs 2.0
