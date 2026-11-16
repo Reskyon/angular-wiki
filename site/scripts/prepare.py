@@ -6,10 +6,10 @@
 - Special wiki pages (_Sidebar, _Footer) are not published.
 - The nav: block of mkdocs.yml is rewritten from the wiki pages: fixed pages
   first and last, the extra pages listed in EXTRA right after the study guide,
-  and every NN-name.md in between, ordered by number and titled with its first
-  "# " heading.
+  every NN-name.md in order, the optional portfolio bonus, and the cheatsheet.
 """
 
+import json
 import re
 import shutil
 import sys
@@ -65,14 +65,57 @@ def title(name: str) -> str:
 
 
 
-def entry(label: str, file: str) -> str:
-    quoted = label.replace("'", "''")
-    return f"  - '{quoted}': {file}\n"
+def quote(label: str) -> str:
+    return label.replace("'", "''")
+
+
+def entry(label: str, file: str, indent: int = 2) -> str:
+    return f"{' ' * indent}- '{quote(label)}': {file}\n"
+
+
+def prepare_portfolio_bonus(source: Path, destination: Path) -> str:
+    """Copy the reviewed export and return its menu section."""
+    if not source.exists():
+        return ""
+    manifest = json.loads((source / "navigation.json").read_text(encoding="utf-8"))
+    if not isinstance(manifest, list) or not manifest:
+        sys.exit("Portfolio bonus requires navigation groups")
+
+    def heading(path: Path) -> str:
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.startswith("# "):
+                return line[2:].strip()
+        sys.exit(f"Portfolio bonus page {path.name} has no title")
+
+    names = {"index"}
+    menu = "  - 'Bonus: CV/Portfolio Angular':\n"
+    menu += entry("Construye tu portfolio", "portfolio-bonus/index.md", indent=6)
+    for group in manifest:
+        menu += f"      - '{quote(group['title'])}':\n"
+        if not group["pages"]:
+            sys.exit("Portfolio bonus navigation group has no pages")
+        for name in group["pages"]:
+            if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9-]*", name) or name in names:
+                sys.exit("Portfolio bonus contains an invalid or duplicate page name")
+            names.add(name)
+            menu += entry(heading(source / f"{name}.md"), f"portfolio-bonus/{name}.md", indent=10)
+
+    files = {f"{name}.md" for name in names}
+    if {path.name for path in source.iterdir()} != files | {"navigation.json"}:
+        sys.exit("Portfolio bonus contains files outside its export manifest")
+    destination.mkdir()
+    for name in sorted(files):
+        path = source / name
+        if not path.is_file() or path.is_symlink():
+            sys.exit("Portfolio bonus page is not a regular file")
+        shutil.copyfile(path, destination / name)
+    return menu
 
 
 extra = [(title(n), f'{n}.md') for n in EXTRA if n in pages]
 parts = [(title(n), f'{n}.md') for n in sorted(pages) if numbered.fullmatch(n)]
-nav = 'nav:\n' + ''.join(entry(*e) for e in FIRST + extra + parts + LAST)
+bonus = prepare_portfolio_bonus(mkdocs_yml.parent / 'portfolio-bonus', docs / 'portfolio-bonus')
+nav = 'nav:\n' + ''.join(entry(*e) for e in FIRST + extra + parts) + bonus + ''.join(entry(*e) for e in LAST)
 
 config = mkdocs_yml.read_text(encoding='utf-8')
 config, count = re.subn(r'^nav:\n(?:[ \t]+.*\n)+', nav, config, count=1, flags=re.M)
