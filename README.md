@@ -19,6 +19,8 @@ de Fernando Herrera en Udemy.
 - [Parte 7: Lifecycle Hooks](https://github.com/Reskyon/angular-wiki/wiki/07-lifecycle-hooks)
 - [Parte 8: Maps App](https://github.com/Reskyon/angular-wiki/wiki/08-maps-app)
 - [Parte 9: Teslo Shop](https://github.com/Reskyon/angular-wiki/wiki/09-teslo-shop)
+- [Angular: preguntas y respuestas de entrevista](https://github.com/Reskyon/angular-wiki/wiki/entrevista-angular):
+  40 preguntas por nivel, de principiante a experto.
 - [Hoja de atajos de Angular](https://github.com/Reskyon/angular-wiki/wiki/cheatsheet)
 - [Formato del código](https://github.com/Reskyon/angular-wiki/wiki/formato-del-codigo): Prettier, ESLint y
   formateo al guardar.
@@ -105,7 +107,10 @@ nginx:alpine sirve el sitio en angular-wiki.reskyon.com
   Hoja de atajos al final. Una página nueva `NN-nombre.md` aparece sin tocar
   nada. Las páginas que no son una parte del curso (`ci-cd-y-despliegue`,
   `formato-del-codigo`, `nuevo-proyecto`) se declaran en la lista `EXTRA` del
-  script y salen justo después de la Guía de estudio. Una página con otro nombre hace fallar el build.
+  script y salen justo después de la Guía de estudio. Las que repasan todo el
+  curso (`entrevista-angular`) se declaran en `AFTER_BONUS` y salen después del
+  Bonus, antes de la Hoja de atajos: una parte nueva nunca queda debajo de
+  ellas. Una página con otro nombre hace fallar el build.
 - **Las anclas son las mismas que en GitHub** (`#módulo-8-…`, en minúsculas y
   con acentos), así que los enlaces a secciones funcionan igual en la wiki y
   en el sitio.

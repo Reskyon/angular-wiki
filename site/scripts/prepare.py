@@ -6,7 +6,8 @@
 - Special wiki pages (_Sidebar, _Footer) are not published.
 - The nav: block of mkdocs.yml is rewritten from the wiki pages: fixed pages
   first and last, the extra pages listed in EXTRA right after the study guide,
-  every NN-name.md in order, the optional portfolio bonus, and the cheatsheet.
+  every NN-name.md in order, the optional portfolio bonus, the pages listed in
+  AFTER_BONUS, and the cheatsheet.
 """
 
 import json
@@ -49,9 +50,12 @@ LAST = [('Hoja de atajos', 'cheatsheet.md')]
 # Pages that are not a part of the course but belong in the menu, right after the
 # study guide. They are optional: a page only enters the menu if it exists in the wiki.
 EXTRA = ['ci-cd-y-despliegue', 'formato-del-codigo', 'nuevo-proyecto']
+# Pages that review the whole course. They go after every numbered part and the
+# portfolio bonus, so a new part never lands below them. Also optional.
+AFTER_BONUS = ['entrevista-angular']
 numbered = re.compile(r'\d\d-[a-z0-9-]+')
 
-known = {'Home', 'study-guide', 'cheatsheet', *EXTRA}
+known = {'Home', 'study-guide', 'cheatsheet', *EXTRA, *AFTER_BONUS}
 unknown = sorted(n for n in pages if n not in known and not numbered.fullmatch(n))
 if unknown:
     sys.exit(f'Pages not in the menu (rename to NN-name or add to prepare.py): {unknown}')
@@ -114,8 +118,10 @@ def prepare_portfolio_bonus(source: Path, destination: Path) -> str:
 
 extra = [(title(n), f'{n}.md') for n in EXTRA if n in pages]
 parts = [(title(n), f'{n}.md') for n in sorted(pages) if numbered.fullmatch(n)]
+after_bonus = [(title(n), f'{n}.md') for n in AFTER_BONUS if n in pages]
 bonus = prepare_portfolio_bonus(mkdocs_yml.parent / 'portfolio-bonus', docs / 'portfolio-bonus')
-nav = 'nav:\n' + ''.join(entry(*e) for e in FIRST + extra + parts) + bonus + ''.join(entry(*e) for e in LAST)
+nav = ('nav:\n' + ''.join(entry(*e) for e in FIRST + extra + parts) + bonus
+       + ''.join(entry(*e) for e in after_bonus + LAST))
 
 config = mkdocs_yml.read_text(encoding='utf-8')
 config, count = re.subn(r'^nav:\n(?:[ \t]+.*\n)+', nav, config, count=1, flags=re.M)
