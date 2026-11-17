@@ -24,6 +24,7 @@ class PortfolioBonusTests(unittest.TestCase):
                 "cheatsheet": "Cheatsheet",
                 "09-teslo-shop": "Teslo Shop",
                 "10-new-chapter": "New chapter",
+                "entrevista-angular": "Interview",
             }.items():
                 (wiki / f"{name}.md").write_text(f"# {title}\n", encoding="utf-8")
 
@@ -52,7 +53,8 @@ class PortfolioBonusTests(unittest.TestCase):
             nav = prepare()
 
             self.assertLess(nav.index("10-new-chapter.md"), nav.index("CV/Portfolio Angular"))
-            self.assertLess(nav.index("CV/Portfolio Angular"), nav.index("cheatsheet.md"))
+            self.assertLess(nav.index("CV/Portfolio Angular"), nav.index("entrevista-angular.md"))
+            self.assertLess(nav.index("entrevista-angular.md"), nav.index("cheatsheet.md"))
             self.assertIn("portfolio-bonus/index.md", nav)
             self.assertIn("portfolio-bonus/learn-projects.md", nav)
             self.assertEqual((docs / "portfolio-bonus" / "learn-projects.md")
