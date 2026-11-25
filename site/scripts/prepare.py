@@ -50,9 +50,10 @@ LAST = [('Hoja de atajos', 'cheatsheet.md')]
 # Pages that are not a part of the course but belong in the menu, right after the
 # study guide. They are optional: a page only enters the menu if it exists in the wiki.
 EXTRA = ['ci-cd-y-despliegue', 'formato-del-codigo', 'nuevo-proyecto']
-# Pages that review the whole course. They go after every numbered part and the
-# portfolio bonus, so a new part never lands below them. Also optional.
-AFTER_BONUS = ['entrevista-angular']
+# Pages that go beyond or review the whole course, in this order: the
+# micro-frontends class, then the interview page. They go after every numbered
+# part and the portfolio bonus, so a new part never lands below them. Also optional.
+AFTER_BONUS = ['microfrontends', 'entrevista-angular']
 numbered = re.compile(r'\d\d-[a-z0-9-]+')
 
 known = {'Home', 'study-guide', 'cheatsheet', *EXTRA, *AFTER_BONUS}
